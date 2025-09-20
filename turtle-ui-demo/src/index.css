@@ -1,0 +1,54 @@
+/* Tailwind - requis */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====== Tokens de marque Turtle (tu peux ajuster les couleurs) ====== */
+:root{
+  --brand-bg:#0b0b0b;
+  --brand-fg:#ffffff;
+  --brand-mute:rgba(255,255,255,.72);
+
+  --brand-primary:#12d19b;
+  --brand-primaryOn:#041a13;
+
+  --brand-glass:rgba(255,255,255,.06);
+  --brand-border:rgba(255,255,255,.10);
+
+  --brand-shadow-glow:0 0 24px rgba(18,209,155,.35);
+  --brand-shadow-glowSoft:0 0 16px rgba(18,209,155,.22);
+
+  --brand-radius-lg:16px;
+  --brand-radius-xl:20px;
+  --brand-radius-full:999px;
+
+  --brand-motion-fast:.18;
+  --brand-motion-base:.24;
+  --brand-motion-page:.36;
+}
+
+/* ====== Base globale (très légère, laisse Tailwind faire le reste) ====== */
+html, body, #root {
+  height: 100%;
+}
+
+body{
+  background: var(--brand-bg);
+  color: var(--brand-fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Liens par défaut (optionnel, tu peux enlever si tu veux) */
+a { color: var(--brand-primary); }
+a:hover { text-decoration: underline; }
+
+/* Utile pour les surfaces “glass” si tu les utilises sans Tailwind */
+.turtle-glass{
+  background: var(--brand-glass);
+  border: 1px solid var(--brand-border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--brand-radius-lg);
+}
